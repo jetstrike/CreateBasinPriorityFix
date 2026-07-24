@@ -1,0 +1,39 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="CC0 1.0 Universal"
+issueTrackerURL="https://github.com/jetstrike/CreateBasinPriorityFix/issues"
+
+[[mods]]
+modId="createbasinpriority"
+version="1.0.0"
+displayName="Create Basin Priority Fix"
+updateJSONURL=""
+displayURL="https://github.com/jetstrike/CreateBasinPriorityFix"
+logoFile="icon.png"
+credits=""
+authors="jetstrike"
+description="Fixes basin recipe overlapping by prioritizing mixing recipes over standard crafting and packing recipes."
+
+[[dependencies.createbasinpriority]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.createbasinpriority]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.createbasinpriority]]
+modId="create"
+type="required"
+versionRange="[6.0.0-9,6.1)"
+ordering="NONE"
+side="BOTH"
+
+[[mixins]]
+config="createbasinpriority.mixins.json"

@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.jetstrike.createbasinpriority.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BasinRecipePriorityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
