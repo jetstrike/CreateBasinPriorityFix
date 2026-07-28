@@ -1,24 +1,29 @@
-# Create Basin Priority Fix
+# Create Recipe Priority
 
-**Create Basin Priority Fix** is a lightweight NeoForge addon for the Create mod that fixes recipe overlap issues in the Basin by intelligently prioritizing recipes. 
+![Banner](./banner.png)
 
-If you've ever tried to mix a Blaze Cake Base and accidentally made a Sugar Cube because the basin processed 4 sugar first, this mod is for you!
+### Solving Automation Frustrations in Large Modpacks!
 
-## What it does
-By default, the Create Basin sorts matching recipes based on the total number of ingredients (descending). This causes 2x2 and 3x3 packing recipes (which have 4 and 9 ingredients) to take priority over standard mixing recipes (like Blaze Cake Base, which only has 3).
+In **large modpacks**, automated compacting and shapeless crafting inside Create's Basin (Pressing and Mixing) can quickly become a frustrating mess of recipe overlaps. 
 
-This mod intercepts the Basin's recipe matching logic and implements a 4-tier priority system:
-1. **Basin Recipes (Highest Priority):** Dedicated Create mixing and compacting recipes always get picked first.
-2. **Automated Shapeless Crafting:** Standard vanilla shapeless recipes using different items.
-3. **3x3 Packing:** Recipes combining 9 of the exact same item.
-4. **2x2 Packing (Lowest Priority):** Recipes combining 4 of the exact same item.
+By default, Create sorts matching Basin recipes solely by the **total number of ingredients** in descending order. When automating crafting processes or mixing complex recipes in content-heavy modpacks, this default behavior introduces frustrating bottlenecks:
+- **Unwanted Compacting:** A **3x3** (9-ingredient) or **2x2** (4-ingredient) packing recipe will almost always take precedence over standard mixing recipes (such as a 3-ingredient Blaze Cake Base). If excess ingredients enter the Basin during automated processing, the machine prematurely compresses them into blocks or items (like Sugar Cubes) instead of your intended craft!
+- **Shapeless Overlaps:** Automated shapeless crafting often collides with custom processing lines, breaking automated production loops and clogging factory inputs.
 
-This ensures you can safely dump mixed ingredients into a Basin without accidentally triggering unwanted packing/compacting recipes!
+---
 
-## Compatibility
-- **Minecraft:** 1.21.1
-- **Mod Loader:** NeoForge
-- **Required Mods:** Create 6.0.0+
+### How It Works: The 4-Tier Priority System
 
-## Installation
-Drop the `.jar` into your `mods` folder. It works out of the box and requires zero configuration!
+**Create Recipe Priority** is a lightweight, out-of-the-box NeoForge addon that intercepts Create’s Basin recipe matching logic. It enforces an intelligent **4-Tier Hierarchy**, ensuring your automation works exactly as intended without complex filtering setups:
+
+1. **Dedicated Basin Recipes (Highest Priority):** Explicit Create recipes will **always** execute first whenever valid ingredients are present.
+2. **Automated Shapeless Crafting:** Standard shapeless crafting recipes utilizing distinct items take second priority, enabling clean and uninterrupted automation.
+3. **3x3 Packing:** Standard block packing recipes requiring 9 identical items.
+4. **2x2 Packing (Lowest Priority):** Small compacting recipes requiring 4 of the same item.
+
+---
+
+### Features & Compatibility
+
+- **Plug & Play:** Requires zero config, scripts, or datapacks. Simply drop it into your mods folder!
+- **Modpack Friendly:** Essential for modpack creators looking to streamline quality-of-life automation across dozens of overlapping mod recipes.
