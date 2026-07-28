@@ -14,6 +14,7 @@ repositories {
     maven { url "https://maven.theillusivec4.top/" } // Curios
     maven { url "https://www.cursemaven.com" }
     maven { url "https://api.modrinth.com/maven" }
+    maven { url "https://raw.githubusercontent.com/Fuzss/modresources/main/maven" } // config api port
 }
 
 base {
