@@ -1,7 +1,5 @@
 # Create Recipe Priority
 
-![Banner](./banner.png)
-
 ### Solving Automation Frustrations in Large Modpacks!
 
 In **large modpacks**, automated compacting and shapeless crafting inside Create's Basin (Pressing and Mixing) can quickly become a frustrating mess of recipe overlaps. 
